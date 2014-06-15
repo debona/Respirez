@@ -1,0 +1,15 @@
+{
+	"settings": {
+		"default_encoding": "UTF-8",
+		"default_line_ending": "LF",
+		"word_wrap": true,
+		"trim_trailing_white_space_on_save": true,
+		"ensure_newline_at_eof_on_save": true
+	},
+	"folders": [{
+		"follow_symlinks": true,
+		"path": ".",
+		"folder_exclude_patterns": [".*"],
+		"file_exclude_patterns":[".bowerrc", ".slugignore"]
+	}]
+}
