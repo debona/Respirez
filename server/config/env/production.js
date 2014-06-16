@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://localhost/mean-prod',
+    db: process.env.MONGOSOUP_URL,
     app: {
         name: 'MEAN - A Modern Stack - Production'
     },
