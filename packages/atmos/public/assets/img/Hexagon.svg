@@ -1,0 +1,11 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="103" height="120">
+	<polygon fill="#eee" stroke="#3498db" stroke-width="5"
+			points="52,20
+					86,40
+					86,80
+					52,100
+					17,80
+					17,40"/>
+
+</svg>
