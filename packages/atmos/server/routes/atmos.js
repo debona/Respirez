@@ -1,26 +1,16 @@
 'use strict';
 
+
+var cities = require('../controllers/cities');
+
 // The Package is past automatically as first parameter
 module.exports = function(Atmos, app, auth, database) {
 
-    app.get('/atmos/example/anyone', function(req, res, next) {
-        res.send('Anyone can access this');
-    });
+    app.route('/cities')
+        .get(cities.all);
+    app.route('/cities/:cityId')
+        .get(cities.show);
 
-    app.get('/atmos/example/auth', auth.requiresLogin, function(req, res, next) {
-        res.send('Only authenticated users can access this');
-    });
-
-    app.get('/atmos/example/admin', auth.requiresAdmin, function(req, res, next) {
-        res.send('Only users with Admin role can access this');
-    });
-
-    app.get('/atmos/example/render', function(req, res, next) {
-        Atmos.render('index', {
-            package: 'atmos'
-        }, function(err, html) {
-            //Rendering a view from the Package server/views
-            res.send(html);
-        });
-    });
+    // Finish with setting up the cityId param
+    app.param('cityId', cities.city);
 };

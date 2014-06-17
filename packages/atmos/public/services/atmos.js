@@ -7,3 +7,11 @@ angular.module('mean.atmos').factory('Atmos', [
         };
     }
 ]);
+
+angular.module('mean.atmos').factory('Cities', ['$resource',
+	function($resource) {
+		return $resource('cities/:cityId', {
+			cityId: '@_id'
+		});
+	}
+]);
