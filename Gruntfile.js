@@ -123,4 +123,70 @@ module.exports = function(grunt) {
     // For Heroku users only.
     // Docs: https://github.com/linnovate/mean/wiki/Deploying-on-Heroku
     grunt.registerTask('heroku:production', ['cssmin', 'uglify']);
+
+    grunt.registerTask('cities', 'seeds with few cities', function(n,e,i,a) {
+        var config = require('./server/config/config');
+        var mongoose = require('mongoose');
+        var connection = mongoose.connection;
+        var City = require(__dirname + '/packages/atmos/server/models/city');
+
+        var _ = require('lodash');
+
+        var done = this.async();
+        mongoose.connect(config.db);
+
+        var requiredCities = [
+            {'name': 'paris'},
+            {'name': 'marseille'},
+            {'name': 'lyon'},
+            {'name': 'toulouse'},
+            {'name': 'nice'},
+            {'name': 'nantes'},
+            {'name': 'strasbourg'},
+            {'name': 'montpellier'},
+            {'name': 'bordeaux'},
+            {'name': 'lille'}
+        ];
+
+        var citiesToAdd = [];
+
+        connection.on('open', function () {
+
+            City.find().exec(function(err, fetchedCities) {
+                if (err) {
+                    console.log(err);
+                    done(false);
+                    return;
+                }
+
+                _.each(requiredCities, function(requiredCity) {
+                    if (!_.where(fetchedCities, requiredCity).length){
+                        requiredCity.records = [{ atmo: 2 }, { atmo: 2 }];
+                        citiesToAdd.push(requiredCity);
+                    }
+                });
+
+                console.log('It adds the following cities :');
+                console.log(citiesToAdd);
+
+                if (citiesToAdd.length) {
+                    City.create(citiesToAdd, function (err) {
+                        if (err) {
+                            console.log(err);
+                            done(false);
+                            return;
+                        }
+
+                        console.log('success!');
+                        // close the database after 'city' is saved.
+                        connection.close();
+                        done(true);
+                    });
+                } else {
+                    console.log('nothing to do');
+                    done(true);
+                }
+            });
+        });
+    });
 };
