@@ -1,9 +1,9 @@
-<div class="" data-ng-controller="AtmosController">
+<div class="" data-ng-controller="AtmosController" data-ng-init="find()">
 
 	<section class="hexagon">
 
 		<span ng-repeat="city in cities" class="{{city.name}}" >
-			?
+			{{city.records[city.records.length-1].atmo}}
 		</span>
 
 	</section>
