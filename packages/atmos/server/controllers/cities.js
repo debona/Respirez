@@ -4,7 +4,8 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    City = mongoose.model('City');
+    City = mongoose.model('City'),
+    _ = require('lodash');
 
 
 /**
@@ -14,6 +15,7 @@ exports.city = function(req, res, next, id) {
     City.load(id, function(err, city) {
         if (err) return next(err);
         if (!city) return next(new Error('Failed to load city ' + id));
+        city.records = _.sortBy(city.records, 'created');
         req.city = city;
         next();
     });
@@ -30,12 +32,17 @@ exports.show = function(req, res) {
  * List of Cities
  */
 exports.all = function(req, res) {
-    City.find().sort('-created').exec(function(err, cities) {
+    City.find().exec(function(err, cities) {
         if (err) {
             return res.jsonp(500, {
                 error: 'Cannot list the cities'
             });
         }
+
+        _.each(cities, function(city){
+            city.records = _.sortBy(city.records, 'created');
+        });
+
         res.jsonp(cities);
     });
 };
