@@ -112,9 +112,9 @@ module.exports = function(grunt) {
 
     //Default task(s).
     if (process.env.NODE_ENV === 'production') {
-        grunt.registerTask('default', ['clean','cssmin', 'uglify', 'concurrent']);
+        grunt.registerTask('default', ['clean','cssmin', 'uglify', 'cities', 'concurrent']);
     } else {
-        grunt.registerTask('default', ['clean','jshint', 'csslint', 'concurrent']);
+        grunt.registerTask('default', ['clean','jshint', 'csslint', 'cities', 'concurrent']);
     }
 
     //Test task.
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 
     // For Heroku users only.
     // Docs: https://github.com/linnovate/mean/wiki/Deploying-on-Heroku
-    grunt.registerTask('heroku:production', ['cssmin', 'uglify']);
+    grunt.registerTask('heroku:production', ['cssmin', 'uglify', 'cities']);
 
     grunt.registerTask('cities', 'seeds with few cities', function(n,e,i,a) {
         var config = require('./server/config/config');
