@@ -1,0 +1,7 @@
+body {
+    background-color: #2e8ece;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 15px;
+}
