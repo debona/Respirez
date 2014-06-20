@@ -35,5 +35,47 @@ a.big-arrow {
 
 	background-color: gray;
 	background-color: rgba(0, 0, 0, 0.1);
+
+	color: white;
+	font-size: 24px;
+
+	text-align: center;
 }
 
+.side-panel hr {
+	border-color: gray;
+	border-color: rgba(0, 0, 0, 0.3);
+}
+
+.side-panel h3 {
+	font-weight:normal;
+}
+
+.side-panel table {
+	width: 100%;
+}
+
+.side-panel td {
+	font-size: 66px;
+	text-align: center;
+	width: 50%;
+	padding: 0.3em;
+}
+
+.side-panel th {
+	font-size: 18px;
+	text-align: center;
+	width: 50%;
+	padding: 0.5em;
+	font-weight:normal;
+}
+
+.side-panel th:first-child {
+	border-right: 1px solid gray;
+	border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.side-panel td:first-child {
+	border-right: 1px solid gray;
+	border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
