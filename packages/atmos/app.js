@@ -46,6 +46,7 @@ Atmos.register(function(app, auth, database) {
     });
     */
     Atmos.aggregateAsset('css', 'atmos.css');
+    Atmos.aggregateAsset('css', 'header.css');
 
     return Atmos;
 });
