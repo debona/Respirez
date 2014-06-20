@@ -45,7 +45,7 @@ Atmos.register(function(app, auth, database) {
         //you now have the settings object
     });
     */
-    Atmos.aggregateAsset('css', 'atmos.css');
+    Atmos.aggregateAsset('css', 'hexagon.css');
     Atmos.aggregateAsset('css', 'header.css');
 
     return Atmos;
