@@ -52,5 +52,7 @@ Atmos.register(function(app, auth, database) {
 
     // Specific style
     Atmos.aggregateAsset('css', 'hexagon.css');
+    Atmos.aggregateAsset('css', 'today.css');
+
     return Atmos;
 });

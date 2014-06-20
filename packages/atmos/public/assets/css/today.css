@@ -1,0 +1,39 @@
+
+.today {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+a.big-arrow {
+	color: white;
+	font-size: 3em;
+	font-weight: bold;
+
+	background-color: blue;
+	background-color: rgba(0, 0, 0, 0.3);
+	line-height: 10em;
+	margin: 0.3em;
+	padding: 0.3em;
+}
+
+.map {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.side-panel {
+	width: 300px;
+	height: 300px;
+
+	padding: 1em;
+	margin: 1em;
+
+	background-color: gray;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+

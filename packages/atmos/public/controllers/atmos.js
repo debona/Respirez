@@ -7,9 +7,9 @@ angular.module('mean.atmos').controller('AtmosController', ['$scope', 'Global', 
             name: 'atmos'
         };
 
-        $scope.find = function() {
+        $scope.today = function() {
             Cities.query(function(cities) {
-                $scope.cities = cities;
+                $scope.cities = cities; // FIXME fetch today record only
             });
         };
     }

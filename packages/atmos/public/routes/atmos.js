@@ -2,9 +2,9 @@
 
 angular.module('mean.atmos').config(['$stateProvider',
     function($stateProvider) {
-        $stateProvider.state('atmos', {
-            url: '/atmos',
-            templateUrl: 'atmos/views/index.html'
+        $stateProvider.state('Aujourd\'hui', {
+            url: '/today',
+            templateUrl: 'atmos/views/today.html'
         });
     }
 ]);

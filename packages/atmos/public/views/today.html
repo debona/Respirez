@@ -1,0 +1,22 @@
+<section class="today">
+
+	<a class="big-arrow">←</a>
+
+	<section class="map">
+
+		<article class="hexagon" data-ng-controller="AtmosController" data-ng-init="today()">
+			<span ng-repeat="city in cities" class="{{city.name}}" >
+				{{city.records[city.records.length-1].atmo}}
+			</span>
+		</article>
+
+		<aside class="side-panel">
+			name : Herpididerp
+		</aside>
+
+	</section>
+
+	<a class="big-arrow">→</a>
+
+</div>
+

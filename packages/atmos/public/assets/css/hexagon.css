@@ -1,15 +1,13 @@
-
-section.hexagon {
+article.hexagon {
     position: relative;
     display: block;
     margin: auto;
-    margin-top: 4em;
     width: 576px;
     height: 668px;
     background-image: url('/atmos/assets/img/Hexagon.png');
 }
 
-section.hexagon * {
+article.hexagon * {
     display: block;
     position: absolute;
     width: 1em;
@@ -21,6 +19,8 @@ section.hexagon * {
     font-weight: bold;
     font-size: 20px;
 }
+
+/* FIXME: no comment */
 
 span.paris {
     top: 183px;
