@@ -9,8 +9,16 @@ angular.module('mean.atmos').controller('TodayController', ['$scope', 'Global', 
 
         $scope.init = function() {
             Cities.query(function(cities) {
-                $scope.cities = cities; // FIXME fetch today record only
+                $scope.cities = cities; // FIXME refactor city/records schema
             });
+        };
+
+        $scope.selected = {
+            name: '- -',
+            records: [
+                { atmo: '-' },
+                { atmo: '-' }
+            ]
         };
     }
 ]);

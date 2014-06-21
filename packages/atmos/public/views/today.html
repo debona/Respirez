@@ -11,14 +11,16 @@
 		</article>
 
 		<aside class="side-panel">
-			<h3>Toulouse</h3>
+			<h3>{{selected.name | capitalize}}</h3>
 			<hr/>
 			<table>
 				<tr>
-					<td>6</td><td>5</td>
+					<td>{{(selected.records | first).atmo}}</td>
+					<td>{{(selected.records | last).atmo}}</td>
 				</tr>
 				<tr>
-					<th>Maintenant</th><th>Demain</th>
+					<th>Maintenant</th>
+					<th>Demain</th>
 				</tr>
 			</table>
 		</aside>
