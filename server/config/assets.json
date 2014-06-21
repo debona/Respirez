@@ -2,7 +2,8 @@
     "core": {
         "css": {
             "public/build/css/dist.min.css": [
-                "public/**/assets/css/*.css"
+                "public/**/assets/css/*.css",
+                "public/system/lib/fontawesome/css/font-awesome.min.css"
             ]
         },
         "js": {
