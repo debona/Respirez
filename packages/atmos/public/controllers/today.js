@@ -20,5 +20,9 @@ angular.module('mean.atmos').controller('TodayController', ['$scope', 'Global', 
                 { atmo: '-' }
             ]
         };
+
+        $scope.select = function todaySelect(selected) {
+            $scope.selected = selected;
+        };
     }
 ]);
