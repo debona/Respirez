@@ -1,10 +1,10 @@
-<section class="today">
+<section class="today" data-ng-controller="TodayController" data-ng-init="init()">
 
 	<a class="big-arrow">←</a>
 
 	<section class="map">
 
-		<article class="hexagon" data-ng-controller="AtmosController" data-ng-init="today()">
+		<article class="hexagon">
 			<span ng-repeat="city in cities" class="{{city.name}}" >
 				{{city.records[city.records.length-1].atmo}}
 			</span>
