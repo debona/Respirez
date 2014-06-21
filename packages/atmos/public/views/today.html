@@ -5,9 +5,9 @@
 	<section class="map">
 
 		<article class="hexagon">
-			<span ng-repeat="city in cities" class="{{city.name}}" ng-click="select(city)" >
+			<a ng-repeat="city in cities" class="{{city.name}}" ng-click="select(city)" >
 				{{(city.records | last).atmo}}
-			</span>
+			</a>
 		</article>
 
 		<aside class="side-panel">
