@@ -4,10 +4,10 @@ angular.module('mean.atmos').controller('TodayController', ['$scope', '$cookies'
     function($scope, $cookies, Global, Cities) {
 
         $scope.selected = {
-            name: '- -',
+            name: '\u00A0',
             records: [
-                { atmo: '-' },
-                { atmo: '-' }
+                { atmo: '\u00A0' },
+                { atmo: '\u00A0' }
             ]
         };
 
