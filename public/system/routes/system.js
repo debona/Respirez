@@ -4,17 +4,12 @@
 angular.module('mean.system').config(['$stateProvider', '$urlRouterProvider',
         function($stateProvider, $urlRouterProvider) {
             // For unmatched routes:
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/today');
 
             // states for my app
-            $stateProvider
-                .state('home', {
-                    url: '/',
-                    templateUrl: 'public/system/views/index.html'
-                })
-                .state('auth', {
-                    templateUrl: 'public/auth/views/index.html'
-                });
+            $stateProvider.state('auth', {
+                templateUrl: 'public/auth/views/index.html'
+            });
         }
     ])
     .config(['$locationProvider',
