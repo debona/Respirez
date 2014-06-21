@@ -6,7 +6,7 @@
 
 		<article class="hexagon">
 			<span ng-repeat="city in cities" class="{{city.name}}" >
-				{{city.records[city.records.length-1].atmo}}
+				{{(city.records | last).atmo}}
 			</span>
 		</article>
 
