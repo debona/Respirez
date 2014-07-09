@@ -160,8 +160,8 @@ module.exports = function(grunt) {
                 }
 
                 _.each(requiredCities, function(requiredCity) {
-                    if (!_.where(fetchedCities, requiredCity).length){
-                        requiredCity.records = [{ atmo: 2 }, { atmo: 2 }];
+                    if (!_.where(fetchedCities, { name: requiredCity.name }).length){
+                        requiredCity.records = [{ atmo: _.random(1, 10) }, { atmo: _.random(1, 10) }];
                         citiesToAdd.push(requiredCity);
                     }
                 });
