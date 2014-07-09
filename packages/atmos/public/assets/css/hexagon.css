@@ -1,86 +1,14 @@
-article.hexagon {
-    position: relative;
-    display: block;
+.hexagon {
     margin: auto;
-    width: 576px;
-    height: 668px;
-    background-image: url('/atmos/assets/img/Hexagon.png');
+    width: 600px;
 }
 
-article.hexagon a {
-    display: block;
-    position: absolute;
+.hexagon rect {
+    cursor: pointer;
+}
 
-    margin-top: -20px;
-    margin-left: -20px;
-
+.hexagon text {
     cursor: pointer;
 
-    text-align: center;
-    font-weight: normal;
-
-    width: 40px;
-    height: 40px;
-    padding-top: 1px;
-    font-size: 24px;
-
-    background: #eee;
-    border: 1px solid #444;
-    color: #444;
-}
-
-article.hexagon a:hover {
-    text-decoration:none;
-}
-
-/* FIXME: no comment */
-
-a.paris {
-    top: 183px;
-    left: 290px;
-}
-
-a.marseille  {
-    top: 532px;
-    left: 398px;
-}
-
-a.lyon  {
-    top: 382px;
-    left: 390px;
-}
-
-a.toulouse  {
-    top: 500px;
-    left: 230px;
-}
-
-a.nice  {
-    top: 479px;
-    left: 507px;
-}
-
-a.nantes  {
-    top: 250px;
-    left: 42px;
-}
-
-a.strasbourg  {
-    top: 202px;
-    left: 531px;
-}
-
-a.montpellier  {
-    top: 576px;
-    left: 345px;
-}
-
-a.bordeaux  {
-    top: 398px;
-    left: 43px;
-}
-
-a.lille  {
-    top: 60px;
-    left: 306px;
+    font-size: 4px;
 }
