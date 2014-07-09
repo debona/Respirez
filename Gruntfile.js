@@ -136,16 +136,16 @@ module.exports = function(grunt) {
         mongoose.connect(config.db);
 
         var requiredCities = [
-            {'name': 'paris'},
-            {'name': 'marseille'},
-            {'name': 'lyon'},
-            {'name': 'toulouse'},
-            {'name': 'nice'},
-            {'name': 'nantes'},
-            {'name': 'strasbourg'},
-            {'name': 'montpellier'},
-            {'name': 'bordeaux'},
-            {'name': 'lille'}
+            { name: 'paris',       display: { x: 49, y: 29 } },
+            { name: 'marseille',   display: { x: 68, y: 80 } },
+            { name: 'lyon',        display: { x: 66, y: 58 } },
+            { name: 'toulouse',    display: { x: 39, y: 76 } },
+            { name: 'nice',        display: { x: 86, y: 73 } },
+            { name: 'nantes',      display: { x: 9,  y: 39 } },
+            { name: 'strasbourg',  display: { x: 89, y: 32 } },
+            { name: 'montpellier', display: { x: 59, y: 87 } },
+            { name: 'bordeaux',    display: { x: 9,  y: 61 } },
+            { name: 'lille',       display: { x: 53, y: 11 } }
         ];
 
         var citiesToAdd = [];

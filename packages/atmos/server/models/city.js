@@ -16,6 +16,10 @@ var CitySchema = new Schema({
         required: true,
         trim: true
     },
+    display: {
+        x: Number,
+        y: Number
+    },
     records: [{
         atmo: {
             type: Number,
